@@ -1,0 +1,131 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+   /* ----------------------------------- BACKGROUND IMAGE --------------------------------------------*/
+
+   .container{
+       height: 100vh;
+       width:100vw;
+       background-size: cover;  
+       background-image: linear-gradient(rgba(45, 42, 42, 0.5),rgba(45,42,42,0.5) ), url("./img/bg4.jpg");
+       position:relative; 
+   }
+
+    /* --------------------------------------- FORM BACKGROUND --------------------------------------*/
+ 
+.form_box{
+    border: 2px solid rgb(138, 138, 138); 
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 90%;
+    max-width: 420px;    
+    top: 45%;
+    left: 30%; 
+    text-align: center;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+}
+
+/*---------------------------------------- FORM HEADING -------------------------------------------------*/
+
+.form_box h1{
+    font-size: 33px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #24005f;
+    font-weight: bolder;
+}
+
+.form_box h1::after{
+    content: ' ';
+    width:300px;
+    height: 4px;
+    border-radius: 3px;
+    position: absolute;
+    background: #24005f;
+    bottom: -12px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+/*---------------------------------------- INPUT VALUES ------------------------------------------*/
+
+.form_item{
+    background: #e5e5e5;
+    margin: 24px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    max-height: 60px; 
+    transition: max-height 0.4s ;
+    overflow: hidden;
+}
+
+.form_group>div input{
+    width: 100%;
+    background: transparent;
+    border:0;
+    outline:0;
+    padding: 20px 15px;
+}
+
+.form_item i{
+    margin-left:15px;
+    color: #999;
+}
+
+/*------------------------------------ FORGOT PASSWORD LINK -------------------------------------*/
+
+form p{
+text-align: left;
+font-weight:bolder;
+
+}
+
+form p a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #24005f;
+}
+
+/*------------------------------------- SIGN UP / SIGN IN BUTTONS -------------------------------------*/
+
+.btn_group{
+width: 100%;
+display: flex;
+justify-content: space-between;
+margin-top: 18px;
+
+}
+
+.btn_group button{
+border:0;
+outline:0;
+cursor:pointer;
+flex-basis: 45%;
+background: #24005f;
+color: #fff;
+height: 60px; 
+transition: background 0.4s;
+border-radius: 20px;
+font-size: 15px;
+font-weight: bolder;
+
+}
+
+.btn_group button.disable{
+    background: #e5e5e5;
+    color:#222222;
+
+}
+
+#terms{
+    display: none;
+}
+ 

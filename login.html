@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/2cebe5cec6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="container">
+        <div class="form_box">
+            <h1 id="title">Sign In</h1>
+            <form action="#">
+                <div class="form_group">
+                    <div class="form_item" id="name" style="max-height: 0px;">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form_item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Enter Your Mail ">
+                    </div>
+                    <div class="form_item">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Enter Your Password">
+                    </div>
+                    <!---------------------------terms & conditon checkbox--------------------------------->
+                    <p  id="terms">
+                        <input type="checkbox" name="condition" id="condition" checked />
+                        <label for="condition" >Agree to all Terms & Conditions </label>
+                    </p>
+                    <!----------------------BUTTON PART ------------------------------------------------------>
+                   <p> <a href="#" id="forgotpass" >Forgot Password?</a> </p>
+                </div>
+                <div class="btn_group">
+                   <button type="button" id="signupbtn" class="disable">Sign Up</button>
+                   <button type="button" id="signinbtn">Sign In</button>
+                </div>
+            </form>
+        </div>
+     </div>
+           <!----------------------------------FUNCTIONALITY------------------------------------------->
+     <script>
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let name = document.getElementById("name");
+        let title = document.getElementById("title");
+        let forgotpass = document.getElementById("forgotpass");
+        let terms = document.getElementById("terms")
+
+        signinbtn.onclick = function(){
+            name.style.maxHeight = "0px";
+            title.innerHTML = "Sign In";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable");
+            forgotpass.style.display ="block";
+            terms.style.display ="none";
+        }
+        
+        signupbtn.onclick = function(){
+            name.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupbtn.classList.remove("disable");
+            signinbtn.classList.add("disable");
+            forgotpass.style.display ="none";
+            terms.style.display ="block";
+
+        }
+     </script>
+</body>
+</html>
