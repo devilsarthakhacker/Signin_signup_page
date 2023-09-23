@@ -12,9 +12,9 @@
 </head>
 <body>
      <div class="container">
-        <div class="form_box">
+        <div class="form_box" >
             <h1 id="title">Sign In</h1>
-            <form action="#">
+            <form action="#" id="formbox">
                 <div class="form_group">
                     <div class="form_item" id="name" style="max-height: 0px;">
                         <i class="fa-solid fa-user"></i>
@@ -37,39 +37,12 @@
                    <p> <a href="#" id="forgotpass" >Forgot Password?</a> </p>
                 </div>
                 <div class="btn_group">
-                   <button type="button" id="signupbtn" class="disable">Sign Up</button>
-                   <button type="button" id="signinbtn">Sign In</button>
+                   <button type="submit" id="signupbtn" class="disable">Sign Up</button>
+                   <button type="submit" id="signinbtn">Sign In</button>
                 </div>
             </form>
         </div>
-     </div>
-           <!----------------------------------FUNCTIONALITY------------------------------------------->
-     <script>
-        let signupbtn = document.getElementById("signupbtn");
-        let signinbtn = document.getElementById("signinbtn");
-        let name = document.getElementById("name");
-        let title = document.getElementById("title");
-        let forgotpass = document.getElementById("forgotpass");
-        let terms = document.getElementById("terms")
-
-        signinbtn.onclick = function(){
-            name.style.maxHeight = "0px";
-            title.innerHTML = "Sign In";
-            signupbtn.classList.add("disable");
-            signinbtn.classList.remove("disable");
-            forgotpass.style.display ="block";
-            terms.style.display ="none";
-        }
-        
-        signupbtn.onclick = function(){
-            name.style.maxHeight = "60px";
-            title.innerHTML = "Sign Up";
-            signupbtn.classList.remove("disable");
-            signinbtn.classList.add("disable");
-            forgotpass.style.display ="none";
-            terms.style.display ="block";
-
-        }
-     </script>
+     </div> 
+     <script src="script.js"></script>
 </body>
 </html>
